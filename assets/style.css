@@ -1,0 +1,97 @@
+/* TrollCoding's site: the colors come from Troll Memory's theme (TMColors.kt). No web fonts and no
+   third-party requests, so the site itself tracks no one. */
+:root {
+  --bg: #14101a;
+  --surface: #1f1829;
+  --raised: #2a2236;
+  --border: #332b44;
+  --text: #f0ebf5;
+  --muted: #9a8fa8;
+  --teal: #3fd9ce;
+  --glow: #8ff2ea;
+  --amber: #e8c44d;
+  --radius: 16px;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg) radial-gradient(ellipse 80% 40% at 50% -5%, rgba(232, 196, 77, 0.10), transparent 70%) no-repeat;
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+a { color: var(--glow); text-underline-offset: 3px; }
+a:hover { color: var(--teal); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+.narrow { max-width: 680px; }
+
+/* Header and footer */
+.site-header { padding: 20px 0; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: 0.02em; font-size: 1.1rem; }
+.brand span { color: var(--teal); }
+.site-header nav a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: 0.95rem; }
+.site-header nav a:hover { color: var(--text); }
+
+.site-footer { border-top: 1px solid var(--border); margin-top: 72px; padding: 28px 0 40px; color: var(--muted); font-size: 0.9rem; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+.site-footer a { color: var(--muted); }
+
+/* Type */
+h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.35rem; line-height: 1.25; margin: 48px 0 12px; }
+h3 { font-size: 1.05rem; margin: 28px 0 6px; }
+p, li { margin: 0 0 12px; }
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 40em; }
+.muted { color: var(--muted); }
+
+/* Home */
+.hero { padding: 48px 0 16px; }
+.game-card {
+  display: grid; grid-template-columns: 1fr; overflow: hidden;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  color: var(--text); text-decoration: none; margin-top: 32px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.game-card:hover { border-color: var(--teal); color: var(--text); transform: translateY(-2px); }
+.game-card .body { padding: 20px 20px 24px; display: flex; gap: 16px; align-items: flex-start; }
+.game-card .body img { width: 64px; height: 64px; border-radius: 14px; flex: none; }
+.game-card h2 { margin: 0 0 4px; font-size: 1.3rem; }
+.game-card p { margin: 0; color: var(--muted); }
+
+/* A game's page */
+.banner { border-radius: var(--radius); border: 1px solid var(--border); margin: 8px 0 32px; width: 100%; }
+.title-row { display: flex; gap: 16px; align-items: center; margin-bottom: 8px; }
+.title-row img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+.title-row h1 { margin: 0; }
+
+.badge {
+  display: inline-block; margin: 16px 0 0; padding: 10px 18px; border-radius: 999px;
+  background: var(--raised); border: 1px solid var(--border); color: var(--amber); font-weight: 600; font-size: 0.95rem;
+}
+
+.features { list-style: none; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.features li { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin: 0; }
+.features strong { color: var(--glow); display: block; margin-bottom: 2px; }
+
+.shots {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(180px, 220px); gap: 12px;
+  overflow-x: auto; padding: 4px 0 12px; scroll-snap-type: x mandatory;
+}
+.shots img { border-radius: 12px; border: 1px solid var(--border); scroll-snap-align: start; }
+
+.lang { border-top: 1px solid var(--border); margin-top: 56px; padding-top: 8px; }
+
+/* Privacy */
+.policy h1 { font-size: clamp(1.6rem, 5vw, 2.1rem); }
+.policy h2 { margin-top: 32px; font-size: 1.15rem; }
+.policy .meta { color: var(--muted); margin-bottom: 24px; }
+.policy hr { border: 0; border-top: 1px solid var(--border); margin: 56px 0; }
