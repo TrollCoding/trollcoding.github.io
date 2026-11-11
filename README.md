@@ -20,6 +20,9 @@ it's live a minute later.
   every other size is cut from it. `logo.png` (128×128, transparent) is the header and footer mark,
   `favicon.png` (64×64, dark rounded tile) the browser tab icon, `apple-touch-icon.png` (180×180)
   the iPhone home screen icon and `icon-512.jpg` the logo search engines see (structured data).
+- `assets/brand/play-developer-header.jpg` (4096×2304): the header image of TrollCoding's developer
+  page on Google Play (Play Console → Developer page). Not used by the site; kept here with the
+  other brand files.
 
 Every page repeats the same header and footer markup (in English or Spanish); when you change one,
 change them all.
