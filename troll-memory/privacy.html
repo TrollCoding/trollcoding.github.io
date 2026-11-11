@@ -7,6 +7,7 @@
 <meta name="description" content="Troll Memory's privacy policy: no accounts, no ads, and anonymous play statistics you can turn off.">
 <meta name="theme-color" content="#14101a">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
@@ -16,13 +17,20 @@
   date when the text changes.
 -->
 <header class="site-header">
-  <div class="wrap narrow">
-    <a class="brand" href="/">Troll<span>Coding</span></a>
-    <nav><a href="#en">English</a><a href="#es">Español</a></nav>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.png" width="34" height="34" alt=""><span>Troll<em>Coding</em></span></a>
+    <nav aria-label="Main">
+      <a class="hide-sm" href="/troll-memory/">Troll Memory</a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <a href="#en" lang="en" hreflang="en">EN</a>
+        <a href="#es" lang="es" hreflang="es">ES</a>
+      </div>
+      <a class="btn btn-primary btn-sm" href="/#contact">Say hi</a>
+    </nav>
   </div>
 </header>
 
-<main class="wrap narrow policy">
+<main id="main" class="wrap narrow policy">
 <section id="en" lang="en">
 <h1>Troll Memory: privacy policy</h1>
 <p class="meta">TrollCoding · Last updated 7 November 2026</p>
@@ -194,9 +202,39 @@ registrar las direcciones IP de los visitantes por seguridad, según la
 </main>
 
 <footer class="site-footer">
-  <div class="wrap narrow">
-    <span>© 2026 TrollCoding · <a href="/troll-memory/">Troll Memory</a></span>
-    <a href="mailto:trollcoding.dev@gmail.com">trollcoding.dev@gmail.com</a>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/"><img src="/assets/logo.png" width="34" height="34" alt=""><span>Troll<em>Coding</em></span></a>
+      <p>Software with a mischievous streak. Made for Android, in English and Spanish.</p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="/troll-memory/">Troll Memory</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.trollcoding.trollmemory">Troll Memory on Google Play</a></li>
+        <li><a href="/troll-memory/privacy.html">Troll Memory privacy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="/#approach">How we work</a></li>
+        <li><a href="/#studio">About us</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="https://www.youtube.com/@TrollCoding">YouTube</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Language</h4>
+      <ul>
+        <li><a href="/">English</a></li>
+        <li><a href="/es/" lang="es" hreflang="es">Español</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap bottom">
+    <span>© 2026 TrollCoding. All tricks reserved.</span>
+    <span>No cookies were harmed in the making of this website.</span>
   </div>
 </footer>
 </body>
